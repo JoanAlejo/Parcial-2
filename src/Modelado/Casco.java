@@ -6,10 +6,18 @@ public class Casco {
     private String modelo;
     private String talla;
     private String certificacion;
-    private double precio;
+    private int precio;
 
-    public Casco(int id, String marca, String modelo, String talla, String certificacion, double precio) {
+    public Casco(int id, String marca, String modelo, String talla, String certificacion, int precio) {
         this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.talla = talla;
+        this.certificacion = certificacion;
+        this.precio = precio;
+    }
+
+    public Casco(String marca, String modelo, String talla, String certificacion, int precio) {
         this.marca = marca;
         this.modelo = modelo;
         this.talla = talla;
@@ -57,11 +65,11 @@ public class Casco {
         this.certificacion = certificacion;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 

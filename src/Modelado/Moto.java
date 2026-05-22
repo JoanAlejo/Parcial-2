@@ -5,10 +5,10 @@ public class Moto {
     private String marca;
     private String modelo;
     private int cilindraje;
-    private double precio;
+    private int precio;
     private String tipo;
 
-    public Moto(int id, String marca, String modelo, int cilindraje, double precio, String tipo) {
+    public Moto(int id, String marca, String modelo, int cilindraje, int precio, String tipo) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -16,6 +16,15 @@ public class Moto {
         this.precio = precio;
         this.tipo = tipo;
     }
+
+    public Moto(String marca, String modelo, int cilindraje, int precio, String tipo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cilindraje = cilindraje;
+        this.precio = precio;
+        this.tipo = tipo;
+    }
+
     public int getId() {
         return id;
     }
@@ -48,11 +57,11 @@ public class Moto {
         this.cilindraje = cilindraje;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
