@@ -28,3 +28,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+#se coloca este archivo en el gitignore para que no se suba al repo y mantenga confidencialidad
+credenciales.properties
