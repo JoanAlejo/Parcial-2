@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CascoDAO {
-    public void insertarCasco(Casco c) {
+    public void insertarCasco(Casco c) { //metodo basado en el del repo del profe
         String sql = "INSERT INTO casco (marca, modelo, talla, certificacion, precio) VALUES (?,?,?,?,?)";
 
         try (Connection conn = DBConnection.getConnection();

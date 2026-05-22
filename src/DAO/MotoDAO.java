@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MotoDAO {
-    public void insertarMoto(Moto m) {
+    public void insertarMoto(Moto m) {//metodo basado en el del repo del profe
         String sql = "INSERT INTO moto (marca, modelo, cilindraje, precio, tipo) VALUES (?,?,?,?,?)";
 
         try (Connection conn = DBConnection.getConnection();
