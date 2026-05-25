@@ -28,4 +28,34 @@ public class CascoDAO {
             System.err.println("Error al insertar casco: " + e.getMessage());
         }
     }
+    public List<Casco> consultarTodas() {
+
+        List<Casco> lista = new ArrayList<>();
+        String sql = "SELECT * FROM casco";
+
+        try (Connection conn = DBConnection.getConnection();
+             Statement st = conn.createStatement();
+             ResultSet rs = st.executeQuery(sql)) {
+
+            while (rs.next()) {
+
+                Casco c = new Casco(
+                        rs.getInt("id"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getString("talla"),
+                        rs.getString("certificacion"),
+                        rs.getInt("precio")
+                );
+
+                lista.add(c);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al consultar cascos: " + e.getMessage());
+        }
+
+        return lista;
+    }
 }
+
