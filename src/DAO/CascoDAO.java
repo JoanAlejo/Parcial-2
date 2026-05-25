@@ -87,5 +87,37 @@ public class CascoDAO {
 
         return c;
     }
+    public List<Casco> filtrarPorPresupuesto(int presupuesto) {
+
+        List<Casco> lista = new ArrayList<>();
+        String sql = "SELECT * FROM casco WHERE precio <= ?";//le pedimos al cliente su presupuesto maximo para mostrarle los otros cascos
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, presupuesto);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                Casco c = new Casco(
+                        rs.getInt("id"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getString("talla"),
+                        rs.getString("certificacion"),
+                        rs.getInt("precio")
+                );
+
+                lista.add(c);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al filtrar por presupuesto: " + e.getMessage());
+        }
+
+        return lista;
+    }
 }
 

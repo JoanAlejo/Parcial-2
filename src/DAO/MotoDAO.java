@@ -86,6 +86,37 @@ public class MotoDAO {
 
         return m;
     }
+    public List<Moto> filtrarPorTipo(String tipo) {
 
+        List<Moto> lista = new ArrayList<>();
+        String sql = "SELECT * FROM moto WHERE tipo = ?";//le vamos a pasar el tipo de moto
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, tipo);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                Moto m = new Moto(
+                        rs.getInt("id"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getInt("cilindraje"),
+                        rs.getInt("precio"),
+                        rs.getString("tipo")
+                );
+
+                lista.add(m);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al filtrar motos: " + e.getMessage());
+        }
+
+        return lista;
+    }
 }
 
