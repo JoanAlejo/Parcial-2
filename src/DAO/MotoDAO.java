@@ -56,5 +56,36 @@ public class MotoDAO {
 
         return lista;
     }
+    public Moto consultarUno(int id) {
+
+        String sql = "SELECT * FROM moto WHERE id = ?";
+        Moto m = null;
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, id);// le pasamos el id que digite el usuario del campo que desea buscar
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+
+                m = new Moto(
+                        rs.getInt("id"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getInt("cilindraje"),
+                        rs.getInt("precio"),
+                        rs.getString("tipo")
+                );
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al consultar moto: " + e.getMessage());
+        }
+
+        return m;
+    }
+
 }
 

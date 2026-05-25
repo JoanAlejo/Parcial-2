@@ -57,5 +57,35 @@ public class CascoDAO {
 
         return lista;
     }
+    public Casco consultarUno(int id) {
+
+        String sql = "SELECT * FROM casco WHERE id = ?";
+        Casco c = null;
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+
+                c = new Casco(
+                        rs.getInt("id"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getString("talla"),
+                        rs.getString("certificacion"),
+                        rs.getInt("precio")
+                );
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al consultar casco: " + e.getMessage());
+        }
+
+        return c;
+    }
 }
 
