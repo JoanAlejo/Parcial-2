@@ -1,4 +1,4 @@
-# Parcial II - Programación Orientada a Objetos
+# Parcial II - POO
 
 ## Descripción
 
