@@ -1,3 +1,4 @@
+import GUI.VentanaMotos;
 import GUI.VentanaPrincipal;
 import menu.Menu;
 
