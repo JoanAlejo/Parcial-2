@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.VentanaPrincipal">
+  <grid id="27dc6" binding="panelPr" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-16777216"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <vspacer id="610f7">
+        <constraints>
+          <grid row="2" column="1" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="abce8" class="javax.swing.JLabel" binding="titulo">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="DialogInput" size="24" style="1"/>
+          <foreground color="-1"/>
+          <text value="DATABASE DE CASCOS Y MOTOS"/>
+        </properties>
+      </component>
+      <component id="b4114" class="javax.swing.JLabel" binding="leyenda">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="DialogInput" size="12" style="2"/>
+          <foreground color="-1"/>
+          <text value="Developed by: Alejandro Muñoz"/>
+        </properties>
+      </component>
+      <component id="2f6ab" class="javax.swing.JButton" binding="botonMoto">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="DialogInput" size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="Moto"/>
+        </properties>
+      </component>
+      <component id="faed9" class="javax.swing.JButton" binding="botonCascco">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="DialogInput" size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="Casco"/>
+        </properties>
+      </component>
+      <component id="cb844" class="javax.swing.JButton" binding="botonSalir">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="DialogInput" size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="Salir"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
