@@ -204,6 +204,7 @@
             <properties>
               <background color="-16777216"/>
               <font name="DialogInput" size="14" style="2"/>
+              <foreground color="-1"/>
             </properties>
           </component>
         </children>
