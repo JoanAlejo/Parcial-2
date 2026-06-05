@@ -173,6 +173,16 @@ password=TU_PASSWORD
 
 ---
 
+## GUI
+
+# Ventana Principal
+![Ventana Principal]()
+# Ventana Moto
+![Ventana Moto]()
+# Ventana Casco
+![Ventana Casco]()
+---
+
 ## Desarrollado por
 
 Alejandro Muñoz estudiante de primer semestre de ingeniería eléctrica de la Universidad Distrital
