@@ -176,11 +176,11 @@ password=TU_PASSWORD
 ## GUI
 
 # Ventana Principal
-![Ventana Principal]()
+![Ventana Principal](I1.png)
 # Ventana Moto
-![Ventana Moto]()
+![Ventana Moto](I2.png)
 # Ventana Casco
-![Ventana Casco]()
+![Ventana Casco](I3.png)
 ---
 
 ## Desarrollado por
